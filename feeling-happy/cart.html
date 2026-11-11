@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик — Feeling Happy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">FEELING HAPPY</a>
+
+    <nav class="nav">
+        <a href="index.html">Головна</a>
+        <a href="menu.html">Меню</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="cakes.html">Торти</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="cart.html" class="active">Кошик</a>
+    </nav>
+</header>
+
+<main class="cart-page">
+
+    <section class="page-heading">
+        <p class="eyebrow">FEELING HAPPY</p>
+        <h1>Ваш кошик</h1>
+        <p>Перевірте замовлення перед оформленням.</p>
+    </section>
+
+    <div id="cart-items" class="cart-items">
+        <p>Ваш кошик поки порожній.</p>
+    </div>
+
+    <section class="delivery-selection">
+        <h2>Доставка</h2>
+
+        <label for="delivery-address">
+            Адреса доставки
+        </label>
+
+        <input
+            type="text"
+            id="delivery-address"
+            placeholder="Наприклад: вул. Соборності, 25, Полтава"
+            autocomplete="street-address"
+        >
+
+        <button
+            type="button"
+            id="calculate-delivery"
+            class="hero-button"
+        >
+            Розрахувати доставку
+        </button>
+
+        <div class="delivery-result">
+            <p>
+                Відстань:
+                <strong id="delivery-distance">Ще не розрахована</strong>
+            </p>
+
+            <p>
+                Вартість доставки:
+                <strong id="delivery-category">—</strong>
+            </p>
+        </div>
+
+        <p id="delivery-message" role="status"></p>
+
+        <p class="delivery-note">
+            Мінімальне замовлення — 200 ₴.
+            При замовленні від 1 000 ₴ доставка безкоштовна.
+        </p>
+    </section>
+
+    <section class="cart-summary">
+
+        <div class="cart-total-row">
+            <span>Сума замовлення:</span>
+            <strong id="cart-subtotal">0 ₴</strong>
+        </div>
+
+        <div class="cart-total-row">
+            <span>Доставка:</span>
+            <strong id="cart-delivery">Буде розрахована</strong>
+        </div>
+
+        <div class="cart-total-row cart-grand-total">
+            <span>Разом:</span>
+            <strong id="cart-total">0 ₴</strong>
+        </div>
+
+    </section>
+
+    <section class="checkout-form">
+
+        <h2>Оформлення замовлення</h2>
+
+        <label for="customer-name">Ваше ім'я</label>
+
+        <input
+            type="text"
+            id="customer-name"
+            placeholder="Введіть ваше ім'я"
+            autocomplete="name"
+            maxlength="80"
+            required
+        >
+
+        <label for="customer-phone">Номер телефону</label>
+
+        <input
+            type="tel"
+            id="customer-phone"
+            placeholder="+380..."
+            autocomplete="tel"
+            maxlength="25"
+            required
+        >
+
+        <label for="order-comment">
+            Коментар до замовлення
+        </label>
+
+        <textarea
+            id="order-comment"
+            placeholder="Побажання до замовлення (необов'язково)"
+            maxlength="500"
+        ></textarea>
+
+        <button
+            type="button"
+            id="place-order"
+            class="hero-button"
+        >
+            Підтвердити замовлення
+        </button>
+
+        <p id="order-message" role="status"></p>
+
+    </section>
+
+    <a href="menu.html" class="hero-button">
+        Повернутися до меню
+    </a>
+
+</main>
+
+<footer class="footer">
+    <p class="footer-logo">FEELING HAPPY</p>
+    <p>Полтава</p>
+
+    <a
+        href="https://www.instagram.com/feeling_happy_pl/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Instagram
+    </a>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
